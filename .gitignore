@@ -1,12 +1,39 @@
-# Backend
+# Backend - Java/Maven
 backend/target/
 backend/.mvn/
 backend/.idea/
 backend/*.iml
+backend/*.class
+backend/*.jar
+backend/*.war
+backend/*.log
+backend/pom.xml.tag
+backend/pom.xml.releaseBackup
+backend/pom.xml.versionsBackup
+backend/pom.xml.next
+backend/pom.xml.bak
+backend/release.properties
+backend/dependency-reduced-pom.xml
+backend/buildNumber.properties
+backend/.mvn/timing.properties
+backend/out/
 
-# Frontend
+# Frontend - Node.js/React
 frontend/node_modules/
 frontend/build/
+frontend/dist/
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/.npm
+frontend/.eslintcache
+frontend/package-lock.json
+frontend/.node_repl_history
+frontend/*.tgz
+frontend/.yarn-integrity
+
+# Environment variables
+frontend/.env
 frontend/.env.local
 frontend/.env.development.local
 frontend/.env.test.local
@@ -15,8 +42,22 @@ frontend/.env.production.local
 # OS
 .DS_Store
 Thumbs.db
+.desktop.ini
 
 # IDE
 .vscode/
+.idea/
 *.swp
 *.swo
+*~
+*.sublime-workspace
+.c9/
+*.launch
+.settings/
+.project
+.classpath
+
+# Miscellaneous
+.gradle/
+.vs/
+coverage/
