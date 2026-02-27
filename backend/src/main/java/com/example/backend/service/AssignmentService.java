@@ -1,6 +1,6 @@
-package com.bugtracker.service;
+package com.example.backend.service;
 
-import com.bugtracker.model.Issue;
+import com.example.backend.model.Issue;
 
 /**
  * Assignment Service Interface
