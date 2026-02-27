@@ -1,10 +1,10 @@
-package com.bugtracker.service.impl;
+package com.example.backend.service.impl;
 
-import com.bugtracker.exception.BusinessException;
-import com.bugtracker.model.*;
-import com.bugtracker.repository.IssueRepository;
-import com.bugtracker.repository.UserRepository;
-import com.bugtracker.service.AssignmentService;
+import com.example.backend.exception.BusinessException;
+import com.example.backend.model.*;
+import com.example.backend.repository.IssueRepository;
+import com.example.backend.repository.UserRepository;
+import com.example.backend.service.AssignmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

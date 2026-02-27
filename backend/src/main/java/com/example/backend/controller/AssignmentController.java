@@ -1,9 +1,9 @@
-package com.bugtracker.controller;
+package com.example.backend.controller;
 
-import com.bugtracker.dto.ApiResponse;
-import com.bugtracker.dto.IssueDto;
-import com.bugtracker.model.Issue;
-import com.bugtracker.service.AssignmentService;
+import com.example.backend.dto.ApiResponse;
+import com.example.backend.dto.IssueDto;
+import com.example.backend.model.Issue;
+import com.example.backend.service.AssignmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
