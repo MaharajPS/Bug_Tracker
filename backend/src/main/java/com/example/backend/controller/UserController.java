@@ -1,66 +1,64 @@
 package com.example.backend.controller;
 
-import com.example.backend.dto.ApiResponse;
-import com.example.backend.dto.UserDto;
-import com.example.backend.model.User;
-import com.example.backend.service.UserService;
-import jakarta.validation.Valid;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- * User Management Controller
- * Created by: Mythili (MY)
- * Endpoint: GET /api/users, POST /api/users
- */
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.backend.dto.ApiResponse;
+import com.example.backend.dto.UserDto;
+import com.example.backend.dto.request.CreateUserRequest;
+import com.example.backend.model.User;
+import com.example.backend.service.UserService;
+
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/api/users")
 public class UserController {
 
-    @Autowired
-    private UserService userService;
+    private final UserService userService;
 
-    /**
-     * Create a new user
-     * @param userDto User data transfer object
-     * @return Created user details
-     */
-    @PostMapping
-    public ResponseEntity<ApiResponse<UserDto>> createUser(
-            @Valid @RequestBody UserDto userDto) {
-
-        User createdUser = userService.createUser(
-            userDto.getName(),
-            userDto.getRole()
-        );
-
-        UserDto responseDto = convertToDto(createdUser);
-        return ResponseEntity.status(HttpStatus.CREATED)
-                .body(ApiResponse.success("User created successfully", responseDto));
+    public UserController(UserService userService) {
+        this.userService = userService;
     }
 
-    /**
-     * Get all users
-     * @return List of all users
-     */
+    // CREATE USER
+    @PostMapping
+    public ResponseEntity<ApiResponse<UserDto>> createUser(
+            @Valid @RequestBody CreateUserRequest request) {
+
+        User createdUser = userService.createUser(
+                request.getName(),
+                request.getRole()
+        );
+
+        UserDto dto = convertToDto(createdUser);
+
+        return ResponseEntity.status(HttpStatus.CREATED)
+                .body(ApiResponse.success("User created successfully", dto));
+    }
+
+    // GET ALL USERS
     @GetMapping
     public ResponseEntity<ApiResponse<List<UserDto>>> getAllUsers() {
-        List<User> users = userService.getAllUsers();
-        List<UserDto> userDtos = users.stream()
+
+        List<UserDto> users = userService.getAllUsers()
+                .stream()
                 .map(this::convertToDto)
                 .collect(Collectors.toList());
 
         return ResponseEntity.ok(
-            ApiResponse.success("Users retrieved successfully", userDtos)
+                ApiResponse.success("Users retrieved successfully", users)
         );
     }
 
-    // Helper method to convert User entity to DTO
     private UserDto convertToDto(User user) {
         UserDto dto = new UserDto();
         dto.setId(user.getId());
