@@ -19,6 +19,12 @@ import com.example.backend.service.UserService;
 
 import jakarta.validation.Valid;
 
+/**
+ * User Management Controller
+ * Created by: Mythili (MY)
+ * Endpoint: GET /api/users, POST /api/users
+ */
+
 @RestController
 @RequestMapping("/api/users")
 public class UserController {
