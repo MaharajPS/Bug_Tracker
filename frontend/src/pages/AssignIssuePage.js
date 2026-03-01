@@ -304,7 +304,7 @@ const AssignIssuePage = () => {
           </form>
         </div>
 
-        <div className="p-4 bg-blue-50 border-t border-blue-200 text-sm text-blue-800">
+        {/* <div className="p-4 bg-blue-50 border-t border-blue-200 text-sm text-blue-800">
           <p className="font-medium">💡 Assignment Rules:</p>
           <ul className="list-disc list-inside mt-1 space-y-1">
             <li>Only ADMIN or TESTER can assign issues</li>
@@ -312,7 +312,7 @@ const AssignIssuePage = () => {
             <li>Only OPEN issues can be assigned (IN_PROGRESS issues are already assigned)</li>
             <li>CLOSED and RESOLVED issues cannot be assigned</li>
           </ul>
-        </div>
+        </div> */}
       </div>
     </div>
   );

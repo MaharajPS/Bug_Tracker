@@ -379,7 +379,7 @@ const UpdateStatusPage = () => {
           </form>
         </div>
 
-        <div className="p-4 bg-purple-50 border-t border-purple-200 text-sm text-purple-800">
+        {/* <div className="p-4 bg-purple-50 border-t border-purple-200 text-sm text-purple-800">
           <p className="font-medium">💡 Business Rules Enforcement:</p>
           <ul className="list-disc list-inside mt-1 space-y-1">
             <li>OPEN → IN_PROGRESS: Only assigned DEVELOPER can start work</li>
@@ -388,7 +388,7 @@ const UpdateStatusPage = () => {
             <li>RESOLVED → OPEN: Only ADMIN/TESTER can reopen resolved issues</li>
             <li>No direct transitions from OPEN to CLOSED allowed</li>
           </ul>
-        </div>
+        </div> */}
       </div>
     </div>
   );

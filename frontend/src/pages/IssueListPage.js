@@ -330,7 +330,7 @@ const IssueListPage = () => {
           </div>
         )}
 
-        <div className="p-4 bg-blue-50 border-t border-blue-200 text-sm text-blue-800">
+        {/* <div className="p-4 bg-blue-50 border-t border-blue-200 text-sm text-blue-800">
           <p className="font-medium">💡 Tips:</p>
           <ul className="list-disc list-inside mt-1 space-y-1">
             <li>Filter by "Unassigned" to find issues needing assignment</li>
@@ -338,7 +338,7 @@ const IssueListPage = () => {
             <li>Filter by your name to see issues assigned to you</li>
             <li>Refresh the list after creating/updating issues to see changes</li>
           </ul>
-        </div>
+        </div> */}
       </div>
     </div>
   );

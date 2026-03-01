@@ -251,14 +251,14 @@ const CreateIssuePage = () => {
           </form>
         </div>
 
-        <div className="p-4 bg-amber-50 border-t border-amber-200 text-sm text-amber-800">
+        {/* <div className="p-4 bg-amber-50 border-t border-amber-200 text-sm text-amber-800">
           <p className="font-medium">💡 Business Rules:</p>
           <ul className="list-disc list-inside mt-1 space-y-1">
             <li>Only ADMIN or TESTER roles can create issues</li>
             <li>New issues always start with status: OPEN</li>
             <li>Issues must be assigned to a DEVELOPER before moving to IN_PROGRESS</li>
           </ul>
-        </div>
+        </div> */}
       </div>
     </div>
   );
