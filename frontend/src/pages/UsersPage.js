@@ -230,7 +230,7 @@ const UsersPage = () => {
         )}
 
         <div className="p-4 bg-gray-50 border-t border-gray-200 text-sm text-gray-600">
-          <p>💡 Tip: Create at least one ADMIN, one TESTER, and one DEVELOPER to test all features</p>
+          {/* <p>💡 Tip: Create at least one ADMIN, one TESTER, and one DEVELOPER to test all features</p> */}
         </div>
       </div>
     </div>
