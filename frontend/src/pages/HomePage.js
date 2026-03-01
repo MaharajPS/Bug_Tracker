@@ -67,25 +67,6 @@ const HomePage = () => {
           </Link>
         ))}
       </div>
-
-      <div className="bg-amazon-lightnavy rounded-xl p-8 text-white text-center">
-        <h2 className="text-2xl font-bold mb-4">Team Workflow</h2>
-        <div className="flex flex-wrap justify-center gap-4">
-          {[
-            {name: "Maharaj (TL)", task: "Project Setup + Swagger"},
-            {name: "Mythili", task: "User Management API"},
-            {name: "Kishore", task: "Create Issue API"},
-            {name: "Rajasabari", task: "Assignment API"},
-            {name: "Priyanka", task: "Status Transition API"},
-            {name: "Vaijayanthi", task: "Issue Query API"}
-          ].map((member, index) => (
-            <div key={index} className="bg-amazon-darkorange p-4 rounded-lg min-w-[200px]">
-              <div className="font-bold text-lg">{member.name}</div>
-              <div className="text-sm mt-1">{member.task}</div>
-            </div>
-          ))}
-        </div>
-      </div>
     </div>
   );
 };
