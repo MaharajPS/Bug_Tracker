@@ -48,7 +48,7 @@ const HomePage = () => {
           Welcome to <span className="text-amazon-orange">BugTracker</span>
         </h1>
         <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-          KIOT 2026 Hackathon Project - A robust issue tracking system with strict business rules and role-based workflows
+          A robust issue tracking system with strict business rules and role-based workflows
         </p>
       </div>
 
