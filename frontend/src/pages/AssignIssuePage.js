@@ -273,12 +273,12 @@ const AssignIssuePage = () => {
             {assignment.issueId && (
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
                 <h3 className="font-bold text-blue-900 mb-2">Selected Issue Details:</h3>
-                {issues.find(i => i.id == assignment.issueId) ? (
+                {issues.find(i => i.id === assignment.issueId) ? (
                   <div className="space-y-1 text-sm">
-                    <p><span className="font-medium">Title:</span> {issues.find(i => i.id == assignment.issueId).title}</p>
-                    <p><span className="font-medium">Priority:</span> {issues.find(i => i.id == assignment.issueId).priority}</p>
-                    <p><span className="font-medium">Status:</span> {getStatusBadge(issues.find(i => i.id == assignment.issueId).status)}</p>
-                    <p><span className="font-medium">Reported By:</span> {issues.find(i => i.id == assignment.issueId).createdBy?.name || 'N/A'}</p>
+                    <p><span className="font-medium">Title:</span> {issues.find(i => i.id === assignment.issueId).title}</p>
+                    <p><span className="font-medium">Priority:</span> {issues.find(i => i.id === assignment.issueId).priority}</p>
+                    <p><span className="font-medium">Status:</span> {getStatusBadge(issues.find(i => i.id === assignment.issueId).status)}</p>
+                    <p><span className="font-medium">Reported By:</span> {issues.find(i => i.id === assignment.issueId).createdBy?.name || 'N/A'}</p>
                   </div>
                 ) : (
                   <p className="text-gray-500">Issue details not available</p>
